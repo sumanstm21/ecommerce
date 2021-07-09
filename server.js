@@ -29,6 +29,10 @@ mongoose.connect(URI, {
     console.log('Connected to MongoDB')
 })
 
+app.get('/', (req, res) => {
+    res.json({msg: "Hello world"})
+})
+
 const PORT = process.env.PORT || 5000
 app.listen(PORT, () =>{
     console.log('Server is running in PORT', PORT)
